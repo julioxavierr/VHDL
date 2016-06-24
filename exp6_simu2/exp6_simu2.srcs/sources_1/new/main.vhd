@@ -1,24 +1,3 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 16.06.2016 08:57:30
--- Design Name: 
--- Module Name: main - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
@@ -35,7 +14,6 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity main is
     Port ( A : in STD_LOGIC;
-           CLOCK : in STD_LOGIC;
            D3 : out STD_LOGIC;
            D2 : out STD_LOGIC;
            D1 : out STD_LOGIC;
@@ -44,21 +22,36 @@ end main;
 
 architecture Behavioral of main is
 
-component jk is
-    port(
-      j : in STD_LOGIC; 
-      k : in STD_LOGIC; 
-      clk : in STD_LOGIC; 
-      reset : in STD_LOGIC; 
-      q : out STD_LOGIC; 
-      qb : out STD_LOGIC 
-   );
+component JK_FF is
+    port (	clock:		in std_logic;
+		J, K:		in std_logic;
+		reset:		in std_logic;
+		Q, Qbar:	out std_logic
+    );
 end component;
 
-signal Q0, NQ0: STD_LOGIC;
-
+signal t_clock : STD_LOGIC;
+signal zero : STD_LOGIC := '0';
+signal not_A : STD_LOGIC;
+signal D3Q, D3Q_bar, D2Q, D2Q_bar, D1Q, D1Q_bar, D0Q, D0Q_bar: STD_LOGIC;
 begin
 
-FF1: jk port map(j=>A, k=>NOT(A), clk=>CLOCK, reset=>'0', q=>Q0, qb=>NQ0);
+not_A <= NOT(A);
+FF1: JK_FF port map(clock=>t_clock, J=>A, K=>not_A, reset=>zero, Q=>D3Q, Qbar=>D3Q_bar);
+D3 <= D3Q;
+FF2: JK_FF port map(clock=>t_clock, J=>D3Q, K=>D3Q_bar, reset=>zero, Q=>D2Q, Qbar=>D2Q_bar);
+D2 <= D2Q;
+FF3: JK_FF port map(clock=>t_clock, J=>D2Q, K=>D2Q_bar, reset=>zero, Q=>D1Q, Qbar=>D1Q_bar);
+D1 <= D1Q;
+FF4: JK_FF port map(clock=>t_clock, J=>D1Q, K=>D1Q_bar, reset=>zero, Q=>D0Q, Qbar=>D0Q_bar);
+D0 <= D0Q;
 
+process
+    begin
+	T_clock <= '0';
+	wait for 5 ns;
+	T_clock <= '1';
+	wait for 5 ns;
+end process;
+    
 end Behavioral;

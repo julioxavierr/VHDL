@@ -1,6 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../and_4.srcs/sources_1/new/and_4_entity.vhd"
-vhdl xil_defaultlib  "../../../and_4.srcs/sources_1/new/test_and_4.vhd"
-
-# Do not sort compile order
-nosort
