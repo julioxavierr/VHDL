@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
-| Date         : Tue Jun 28 11:29:51 2016
+| Date         : Tue Jun 28 11:52:41 2016
 | Host         : JULIOXAVIERCB2B running 64-bit Service Pack 1  (build 7601)
 | Command      : report_io -file shift_register_io_placed.rpt
 | Design       : shift_register
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            15 |
+|            14 |
 +---------------+
 
 
@@ -254,7 +254,7 @@ Table of Contents
 | V19        | D3           | High Range | IO_L15N_T2_DQS_DOUT_CSO_B_14 | OUTPUT        | LVCMOS33    |      14 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
 | W1         |              |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |
 | W2         |              | High Range | IO_L5N_T0_34                 | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
-| W3         | SAIDA_TEST   | High Range | IO_L6N_T0_VREF_34            | OUTPUT        | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |
+| W3         |              | High Range | IO_L6N_T0_VREF_34            | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | W4         |              | High Range | IO_L12N_T1_MRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | W5         |              | High Range | IO_L12P_T1_MRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |
 | W6         |              | High Range | IO_L13N_T2_MRCC_34           | User IO       |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |

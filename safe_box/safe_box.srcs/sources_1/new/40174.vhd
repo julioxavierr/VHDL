@@ -34,16 +34,11 @@ end ci40174;
 
 architecture Behavioral of ci40174 is
 
-component d_ff is
-  
-  port (
-    clk   : in  std_logic;
-    rst_n : in  std_logic;
-    set_n : in  std_logic;
-    d     : in  std_logic;
-    q     : out std_logic;
-    q_n   : out std_logic);
-
+component dff is
+port(   data_in:    in std_logic;
+    clock:      in std_logic;
+    data_out:   out std_logic
+);
 end component;
 
 signal alto : std_logic := '1';
@@ -51,11 +46,11 @@ signal T_qn : std_logic;
 
 begin
 
-FF1: d_ff port map (clk=>CLK,rst_n=>alto,set_n=>alto,d=>D0,q=>Q0,q_n=>T_qn);
-FF2: d_ff port map (clk=>CLK,rst_n=>alto,set_n=>alto,d=>D1,q=>Q1,q_n=>T_qn);
-FF3: d_ff port map (clk=>CLK,rst_n=>alto,set_n=>alto,d=>D2,q=>Q2,q_n=>T_qn);
-FF4: d_ff port map (clk=>CLK,rst_n=>alto,set_n=>alto,d=>D3,q=>Q3,q_n=>T_qn);
-FF5: d_ff port map (clk=>CLK,rst_n=>alto,set_n=>alto,d=>D4,q=>Q4,q_n=>T_qn);
-FF6: d_ff port map (clk=>CLK,rst_n=>alto,set_n=>alto,d=>D5,q=>Q5,q_n=>T_qn);
+FF1: dff port map (data_in=>D0,clock=>CLK,data_out=>Q0);
+FF2: dff port map (data_in=>D1,clock=>CLK,data_out=>Q1);
+FF3: dff port map (data_in=>D2,clock=>CLK,data_out=>Q2);
+FF4: dff port map (data_in=>D3,clock=>CLK,data_out=>Q3);
+FF5: dff port map (data_in=>D4,clock=>CLK,data_out=>Q4);
+FF6: dff port map (data_in=>D5,clock=>CLK,data_out=>Q5);
 
 end Behavioral;

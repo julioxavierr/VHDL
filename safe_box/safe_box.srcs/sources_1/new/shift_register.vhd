@@ -93,16 +93,16 @@ U2mux: mux8x4 port map  (SEL=>SHIFT_SELECT, A_1=>q_u22, B_1=>q_u5, A_2=>q_u23, B
 U3mux: mux8x4 port map  (SEL=>SHIFT_SELECT, A_1=>q_u26, B_1=>q_u24, A_2=>gnd, B_2=>q_u25, A_3=>a_3_u3, B_3=>b_3_u3, A_4=>a_4_u4, B_4=>b_4_u4, Y_1=>d_u25, Y_2=>d_u26, Y_3=>d_u27, Y_4=>d_u28);
 
 
-U2FF: dff port map (d_u2,and_clock,q_u2);
-U3FF: dff port map (d_u3,and_clock,q_u3);
-U4FF: dff port map (d_u4,and_clock,q_u4);
-U5FF: dff port map (d_u5,and_clock,q_u5);
-U21FF: dff port map (d_u21,and_clock,q_u21);
-U22FF: dff port map (d_u22,and_clock,q_u22);
-U23FF: dff port map (d_u23,and_clock,q_u23);
-U24FF: dff port map (d_u24,and_clock,q_u24);
-U25FF: dff port map (d_u25,and_clock,q_u25);
-U26FF: dff port map (d_u26,and_clock,q_u26);
+U2FF: dff port map (data_in=>d_u2,clock=>and_clock,data_out=>q_u2);
+U3FF: dff port map (data_in=>d_u3,clock=>and_clock,data_out=>q_u3);
+U4FF: dff port map (data_in=>d_u4,clock=>and_clock,data_out=>q_u4);
+U5FF: dff port map (data_in=>d_u5,clock=>and_clock,data_out=>q_u5);
+U21FF: dff port map (data_in=>d_u21,clock=>and_clock,data_out=>q_u21);
+U22FF: dff port map (data_in=>d_u22,clock=>and_clock,data_out=>q_u22);
+U23FF: dff port map (data_in=>d_u23,clock=>and_clock,data_out=>q_u23);
+U24FF: dff port map (data_in=>d_u24,clock=>and_clock,data_out=>q_u24);
+U25FF: dff port map (data_in=>d_u25,clock=>and_clock,data_out=>q_u25);
+U26FF: dff port map (data_in=>d_u26,clock=>and_clock,data_out=>q_u26);
 
 D0 <= q_u2;
 D1 <= q_u3;
@@ -114,7 +114,5 @@ D6 <= q_u23;
 D7 <= q_u24;
 D8 <= q_u25;
 D9 <= q_u26;
-
-SAIDA_TEST <= '1';
 
 end Behavioral;

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version      : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
-| Date              : Tue Jun 28 11:30:13 2016
+| Date              : Tue Jun 28 11:53:03 2016
 | Host              : JULIOXAVIERCB2B running 64-bit Service Pack 1  (build 7601)
 | Command           : report_clock_utilization -file shift_register_clock_utilization_routed.rpt
 | Design            : shift_register

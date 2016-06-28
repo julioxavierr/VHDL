@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
-| Date             : Tue Jun 28 11:30:13 2016
+| Date             : Tue Jun 28 11:53:03 2016
 | Host             : JULIOXAVIERCB2B running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file shift_register_power_routed.rpt -pb shift_register_power_summary_routed.pb -rpx shift_register_power_routed.rpx
 | Design           : shift_register
@@ -49,12 +49,12 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.063 |       42 |       --- |             --- |
+| Slice Logic    |     0.063 |       41 |       --- |             --- |
 |   LUT as Logic |     0.055 |       10 |     20800 |            0.05 |
 |   Register     |     0.007 |       10 |     41600 |            0.02 |
-|   Others       |     0.000 |       21 |       --- |             --- |
+|   Others       |     0.000 |       20 |       --- |             --- |
 | Signals        |     0.148 |       15 |       --- |             --- |
-| I/O            |    19.043 |       15 |       106 |           14.15 |
+| I/O            |    19.043 |       14 |       106 |           13.21 |
 | Static Power   |     0.466 |          |           |                 |
 | Total          |    19.720 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1467124129">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1467125486">
   <File Type="RDS-PROPCONSTRS" Name="shift_register_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="shift_register.tcl"/>
   <File Type="RDS-RDS" Name="shift_register.vds"/>

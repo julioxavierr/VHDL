@@ -27,5 +27,3 @@ set_property src_info {type:XDC file:1 line:63 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN V13 [get_ports D8]
 set_property src_info {type:XDC file:1 line:65 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V3 [get_ports D9]
-set_property src_info {type:XDC file:1 line:67 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN W3 [get_ports {SAIDA_TEST}]
