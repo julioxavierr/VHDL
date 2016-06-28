@@ -11,10 +11,10 @@
 ## Switches
 set_property PACKAGE_PIN V17 [get_ports MODE]
 set_property IOSTANDARD LVCMOS33 [get_ports MODE]
-set_property PACKAGE_PIN V16 [get_ports SHIFT_SELECT]
-set_property IOSTANDARD LVCMOS33 [get_ports SHIFT_SELECT]
-set_property PACKAGE_PIN W16 [get_ports CLOCK]
+set_property PACKAGE_PIN V16 [get_ports CLOCK]
 set_property IOSTANDARD LVCMOS33 [get_ports CLOCK]
+set_property PACKAGE_PIN W16 [get_ports SHIFT_SELECT]
+set_property IOSTANDARD LVCMOS33 [get_ports SHIFT_SELECT]
 set_property PACKAGE_PIN W17 [get_ports DIGIT]
 set_property IOSTANDARD LVCMOS33 [get_ports DIGIT]
 #set_property PACKAGE_PIN W15 [get_ports {sw[4]}]
