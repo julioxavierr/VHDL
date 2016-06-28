@@ -13,7 +13,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity mux8x1 is
+entity mux8x4 is
 Port (	
         SEL : in STD_LOGIC;
         A_1 : in STD_LOGIC;
@@ -24,16 +24,14 @@ Port (
 		B_3 : in STD_LOGIC;
 		A_4 : in STD_LOGIC;
 		B_4 : in STD_LOGIC;
-		A_5 : in STD_LOGIC;
-		B_5 : in STD_LOGIC;
 		Y_1 : out STD_LOGIC;
 		Y_2 : out STD_LOGIC;
 		Y_3 : out STD_LOGIC;
 		Y_4 : out STD_LOGIC
 	);
-end mux8x1;
+end mux8x4;
 
-architecture Behavioral of mux8x1 is
+architecture Behavioral of mux8x4 is
 
 component mux2x1 is
     Port ( A : in STD_LOGIC;
