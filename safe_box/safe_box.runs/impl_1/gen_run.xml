@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1467125535">
-  <File Type="OPT-DCP" Name="shift_register_opt.dcp"/>
   <File Type="ROUTE-STATUS-PB" Name="shift_register_route_status.pb"/>
   <File Type="PA-TCL" Name="shift_register.tcl"/>
+  <File Type="OPT-DCP" Name="shift_register_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="shift_register_timing_summary_init.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="shift_register_methodology_drc_opted.rpt"/>
   <File Type="RDI-RDI" Name="shift_register.vdi"/>
   <File Type="PWROPT-DRC" Name="shift_register_drc_pwropted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="shift_register_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="shift_register_timing_summary_init.rpt"/>
   <File Type="OPT-DRC" Name="shift_register_drc_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="shift_register_pwropt.dcp"/>
   <File Type="OPT-HWDEF" Name="shift_register.hwdef"/>
@@ -31,8 +31,8 @@
   <File Type="ROUTE-DRC" Name="shift_register_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="shift_register_drc_routed.pb"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="shift_register_methodology_drc_routed.rpt"/>
-  <File Type="BG-BIT" Name="shift_register.bit"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="shift_register_methodology_drc_routed.pb"/>
+  <File Type="BG-BIT" Name="shift_register.bit"/>
   <File Type="ROUTE-PWR" Name="shift_register_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="shift_register_power_summary_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="shift_register_power_routed.rpx"/>
