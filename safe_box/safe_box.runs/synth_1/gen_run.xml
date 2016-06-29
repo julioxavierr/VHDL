@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1467125486">
-  <File Type="RDS-PROPCONSTRS" Name="shift_register_drc_synth.rpt"/>
-  <File Type="PA-TCL" Name="shift_register.tcl"/>
-  <File Type="RDS-RDS" Name="shift_register.vds"/>
-  <File Type="RDS-UTIL" Name="shift_register_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="shift_register_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="shift_register.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="shift_register_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="shift_register_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1467171435">
+  <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="main.tcl"/>
+  <File Type="RDS-RDS" Name="main.vds"/>
+  <File Type="RDS-UTIL" Name="main_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="main.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/mux2x1.vhd">
@@ -28,30 +28,39 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/shift_register.vhd">
+    <File Path="$PSRCDIR/sources_1/new/40174.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/d_ff.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/JK_FF.vhd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/shift_register.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/password_config.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/main.vhd">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="shift_register"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="main"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

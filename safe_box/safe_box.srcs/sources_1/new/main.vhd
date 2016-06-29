@@ -20,6 +20,8 @@ Port (
         SHIFT_SELECT :  			in STD_LOGIC;
         DIGIT :         			in STD_LOGIC;
 
+        DIGIT_OUT : 				out STD_LOGIC;
+
         D0_DIGIT :            		out STD_LOGIC;
         D1_DIGIT :            		out STD_LOGIC;
         D2_DIGIT :            		out STD_LOGIC;
@@ -129,9 +131,22 @@ signal clk_jkff_u12, reset_jkff_u12, q_jkff_u12, q_n_jkff_u12 : STD_LOGIC;
 signal q_jkff_u16, q_n_jkff_u16 : STD_LOGIC;
 begin
 
+DIGIT_OUT <= DIGIT;
 PASS_CONFIG: password_config port map (D0=>D0_CONFIG, D1=>D1_CONFIG, D2=>D2_CONFIG, D3=>D3_CONFIG, D4=>D4_CONFIG, D5=>D5_CONFIG, D6=>D6_CONFIG, D7=>D7_CONFIG, D8=>D8_CONFIG, D9=>D9_CONFIG, MODE=>MODE, SAVE_PASSWORD_CLOCK=>SAVE_PASSWORD_CLOCK, U6_Q0=>u6_q0, U6_Q1=>u6_q1, U6_Q2=>u6_q2, U6_Q3=>u6_q3, U6_Q4=>u6_q4, U6_Q5=>u6_q5, U29_Q0=>u29_q0, U29_Q1=>u29_q1, U29_Q2=>u29_q2, U29_Q3=>u29_q3, U29_Q4=>u29_q4, U29_Q5=>u29_q5);
 
+
 PASS_SHIFT: shift_register port map (MODE=>MODE, CLOCK=>DIGIT_CLOCK, SHIFT_SELECT=>SHIFT_SELECT, DIGIT=>DIGIT, D0=>t_d0, D1=>t_d1, D2=>t_d2, D3=>t_d3, D4=>t_d4, D5=>t_d5, D6=>t_d6, D7=>t_d7, D8=>t_d8, D9=>t_d9);
+
+D0_DIGIT <= t_d0;
+D1_DIGIT <= t_d1;
+D2_DIGIT <= t_d2;
+D3_DIGIT <= t_d3;
+D4_DIGIT <= t_d4;
+D5_DIGIT <= t_d5;
+D6_DIGIT <= t_d6;
+D7_DIGIT <= t_d7;
+D8_DIGIT <= t_d8;
+D9_DIGIT <= t_d9;
 
 d0_comp <= u6_q0 XNOR t_d0;
 d1_comp <= u6_q1 XNOR t_d1;

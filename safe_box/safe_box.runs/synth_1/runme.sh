@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log shift_register.vds -m64 -mode batch -messageDb vivado.pb -notrace -source shift_register.tcl
+EAStep vivado -log main.vds -m64 -mode batch -messageDb vivado.pb -notrace -source main.tcl
