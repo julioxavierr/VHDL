@@ -2,11 +2,11 @@
 # Vivado v2016.1 (64-bit)
 # SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
 # IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
-# Start of session at: Tue Jun 28 11:52:21 2016
-# Process ID: 2992
+# Start of session at: Wed Jun 29 17:33:35 2016
+# Process ID: 1004
 # Current directory: C:/Mac/Home/Desktop/SD1/VHDL/safe_box/safe_box.runs/impl_1
-# Command line: vivado.exe -log shift_register.vdi -applog -messageDb vivado.pb -mode batch -source shift_register.tcl -notrace
-# Log file: C:/Mac/Home/Desktop/SD1/VHDL/safe_box/safe_box.runs/impl_1/shift_register.vdi
+# Command line: vivado.exe -log main.vdi -applog -messageDb vivado.pb -mode batch -source main.tcl -notrace
+# Log file: C:/Mac/Home/Desktop/SD1/VHDL/safe_box/safe_box.runs/impl_1/main.vdi
 # Journal file: C:/Mac/Home/Desktop/SD1/VHDL/safe_box/safe_box.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source shift_register.tcl -notrace
+source main.tcl -notrace

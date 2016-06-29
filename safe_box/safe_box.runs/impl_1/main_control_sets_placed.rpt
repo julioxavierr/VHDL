@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
-| Date         : Wed Jun 29 00:39:48 2016
+| Date         : Wed Jun 29 17:33:57 2016
 | Host         : JULIOXAVIERCB2B running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -33,8 +33,8 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              20 |            9 |
-| No           | No                    | Yes                    |               2 |            1 |
+| No           | No                    | No                     |              20 |           10 |
+| No           | No                    | Yes                    |               2 |            2 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
@@ -45,12 +45,12 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------------+---------------+------------------------------------+------------------+----------------+
-|              Clock Signal             | Enable Signal |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
-+---------------------------------------+---------------+------------------------------------+------------------+----------------+
-|  PASS_SHIFT/U24FF/clock               |               | PASS_SHIFT/U5FF/OPEN_SAFE_BOX_OBUF |                1 |              2 |
-|  PASS_CONFIG/CI_U6/FF1/data_out_reg_0 |               |                                    |                5 |             10 |
-|  PASS_SHIFT/U26FF/clock_0             |               |                                    |                4 |             10 |
-+---------------------------------------+---------------+------------------------------------+------------------+----------------+
++---------------------------------------+---------------+-----------------------+------------------+----------------+
+|              Clock Signal             | Enable Signal |    Set/Reset Signal   | Slice Load Count | Bel Load Count |
++---------------------------------------+---------------+-----------------------+------------------+----------------+
+|  JKFF_U12/clock                       |               | PASS_SHIFT/U5FF/reset |                2 |              2 |
+|  PASS_CONFIG/CI_U6/FF1/data_out_reg_0 |               |                       |                6 |             10 |
+|  PASS_SHIFT/U26FF/clock               |               |                       |                4 |             10 |
++---------------------------------------+---------------+-----------------------+------------------+----------------+
 
 

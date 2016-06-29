@@ -2,8 +2,8 @@
 # Vivado v2016.1 (64-bit)
 # SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
 # IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
-# Start of session at: Wed Jun 29 00:22:08 2016
-# Process ID: 1748
+# Start of session at: Wed Jun 29 17:15:01 2016
+# Process ID: 3412
 # Current directory: C:/Mac/Home/Desktop/SD1/VHDL/safe_box/safe_box.runs/impl_1
 # Command line: vivado.exe -log main.vdi -applog -messageDb vivado.pb -mode batch -source main.tcl -notrace
 # Log file: C:/Mac/Home/Desktop/SD1/VHDL/safe_box/safe_box.runs/impl_1/main.vdi

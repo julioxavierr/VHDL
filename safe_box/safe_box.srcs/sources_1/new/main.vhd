@@ -129,6 +129,8 @@ signal q_dff_counter : STD_LOGIC;
 signal nand_u19, and_u19 : STD_LOGIC;
 signal clk_jkff_u12, reset_jkff_u12, q_jkff_u12, q_n_jkff_u12 : STD_LOGIC;
 signal q_jkff_u16, q_n_jkff_u16 : STD_LOGIC;
+signal detect_confirm_pass : STD_LOGIC;
+
 begin
 
 DIGIT_OUT <= DIGIT;
@@ -164,7 +166,19 @@ comparison <= d0_comp AND d1_comp AND d2_comp AND d3_comp AND d4_comp AND d5_com
 
 DFF_COUNTER: dff port map (data_in=>comparison, clock=>CONFIRM_PASSWORD_CLOCK, data_out=>q_dff_counter);
 
-OPEN_SAFE_BOX <= (nand_u19 AND comparison) OR (NOT(MODE));
+
+
+detect_confirm_pass <= CONFIRM_PASSWORD_CLOCK;
+
+process
+begin
+if (detect_confirm_pass = '1') then
+   OPEN_SAFE_BOX <= (nand_u19 AND comparison) OR (NOT(MODE));
+else
+    OPEN_SAFE_BOX <= '0';
+end if;
+wait for 5ns;
+end process;
 
 clk_jkff_u12 <= (NOT(comparison)) AND CONFIRM_PASSWORD_CLOCK AND nand_u19;
 reset_jkff_u12 <= (nand_u19 AND comparison) OR (NOT(MODE)); -- igual ao open_safe_box (apenas out)
